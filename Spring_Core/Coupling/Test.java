@@ -2,8 +2,14 @@ package Coupling;
 
 public class Test {
     public static void main(String[] args) {
-        Student s=new Student();
+        Student s=new Student(new DSA());
         s.learn();
+
+        Student s1=new Student();
+        s1.setCourse(new Python());
+        s1.learn();
+
+
 
 
     }

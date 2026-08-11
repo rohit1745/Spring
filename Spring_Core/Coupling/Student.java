@@ -6,7 +6,24 @@ public class Student {
 
         //Java j=new Java();
 
+
+        Student()
+        {
+
+        }
+
+        public void setCourse(Course course)
+        {
+            this.course=course;
+        }
+
+
         Course course;
+
+        Student(Course course)
+        {
+            this.course=course;
+        }
 
         void learn()
         {

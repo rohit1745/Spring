@@ -1,7 +1,7 @@
 package Coupling;
 
-public class Python {
-    void start()
+public class Python implements Course {
+    public void start()
     {
         System.out.println("Python batch Starting");
     }

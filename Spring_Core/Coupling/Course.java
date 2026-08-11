@@ -1,9 +1,7 @@
 package Coupling;
 
-public class Course {
+public interface Course {
 
 
-    void start(){
-
-    }
+    void start();
 }
