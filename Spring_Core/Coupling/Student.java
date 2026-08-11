@@ -2,16 +2,17 @@ package Coupling;
 
 public class Student {
 
-        DSA d=new DSA();
+      //  DSA d=new DSA();
 
-        Java j=new Java();
+        //Java j=new Java();
 
+        Course course;
 
         void learn()
         {
             System.out.println("learning Started");
-            d.start();
-            j.start();
+            course.start();
+
         }
     }
 
