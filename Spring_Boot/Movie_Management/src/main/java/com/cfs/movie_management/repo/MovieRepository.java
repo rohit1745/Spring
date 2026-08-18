@@ -30,11 +30,23 @@ public class MovieRepository {
 
     public List<movie> searchByName(String name)
     {
-        return movieDB.values()
-                .stream()
-                .filter(movie -> movie.getName()!=null &&
-                        movie.getName().toLowerCase().contains(name.toLowerCase()))
-                .collect(Collectors.toList());
+//        return movieDB.values()
+//                .stream()
+//                .filter(movie -> movie.getName()!=null &&
+//                        movie.getName().toLowerCase().contains(name.toLowerCase()))
+//                .collect(Collectors.toList());
+
+
+
+        List<movie> movieList = new ArrayList<>();
+       for(movie collection: movieDB.values())
+       {
+           if(collection.getName().equals(name))
+           {
+               movieList.add(collection);
+           }
+       }
+       return movieList;
     }
 
 
