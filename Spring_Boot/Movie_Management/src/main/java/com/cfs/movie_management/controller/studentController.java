@@ -32,10 +32,11 @@ public class studentController {
     }
 
 
-    public movie getMovieById(@RequestParam Long id)
+    @GetMapping("/search")
+    public List<movie> searchMovieByName(@RequestParam String name)
     {
 
-        return movieService.getMovieByID(id);
+        return movieService.searchByName(name);
     }
 
 
