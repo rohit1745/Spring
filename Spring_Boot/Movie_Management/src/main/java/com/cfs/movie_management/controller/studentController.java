@@ -32,6 +32,13 @@ public class studentController {
     }
 
 
+    public movie getMovieById(@RequestParam Long id)
+    {
+
+        return movieService.getMovieByID(id);
+    }
+
+
     @GetMapping("/search")
     public List<movie> searchByMovieName(@RequestParam String name)
     {
@@ -40,6 +47,7 @@ public class studentController {
 
     @PostMapping
     public List<movie> save()
+
     {
         return movieService.getAllMovies();
     }
