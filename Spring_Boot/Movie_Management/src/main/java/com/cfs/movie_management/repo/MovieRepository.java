@@ -1,16 +1,28 @@
 package com.cfs.movie_management.repo;
 
 import com.cfs.movie_management.model.movie;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
+@Service
 public class MovieRepository {
+
+
+    public MovieRepository() {
+        System.out.println("Default Movie Repository........");
+    }
 
     private final Map<Long , movie> movieDB=new HashMap<>();
 
+
+
+    @PostConstruct
     public void loadDummyData()
     {
+        System.out.println("Loading Dummy Data.........");
         movieDB.put(1L,new movie(1L,"Salar","Action",9.8,2022,"Hindi"));
         movieDB.put(2L,new movie(2L,"KGF","Action-romance",9.5,2022,"Hindi"));
         movieDB.put(3L,new movie(3L,"King of Kotha","Action",9.8,2023,"Hindi"));
